@@ -6,7 +6,6 @@ import requests
 # Create your views here.
 @api_view(['POST'])
 def handleRequest(request):
-    print(list(request.data.items()))
 
     url = 'https://apikr.lookinbody.com/inbody/GetFullInBodyDataByID'
 
@@ -15,8 +14,6 @@ def handleRequest(request):
         'API-KEY': 'OilU7HR9nOzy7XQOvOYj7uyaBZf/lzlAysy+OIDtEF8=',
         'Account': 'devcors07',
     }
-
-    print('receiving data', request.data.get('UserId'), request.data.get('TestDatetimes'))
 
     data = {
         'UserID': request.data.get('UserID'),
