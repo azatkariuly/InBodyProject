@@ -15,6 +15,8 @@ def handleRequest(request):
         'Account': 'devcors07',
     }
 
+    print('receiving data', request.data.get('UserId'), request.data.get('TestDatetimes'))
+
     data = {
         'UserID': request.data.get('UserId'),
         'Datetimes': request.data.get('TestDatetimes'),
