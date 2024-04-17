@@ -19,7 +19,7 @@ def handleRequest(request):
     print('receiving data', request.data.get('UserId'), request.data.get('TestDatetimes'))
 
     data = {
-        'UserID': request.data.get('UserId'),
+        'UserID': request.data.get('UserID'),
         'Datetimes': request.data.get('TestDatetimes'),
     }
 
